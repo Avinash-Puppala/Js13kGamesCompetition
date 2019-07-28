@@ -1,3 +1,3 @@
-# newTest2
+# Js13kGamesCompetition
 
-DIZGUSTING
+Repository for 13KB HTML5 game
