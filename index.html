@@ -31,7 +31,7 @@ function startGame() {
 
 function pasueGame() {
   if(myGameArea.frameNo > 0){
-    myGameArea.pasue();
+    myGameArea.clear();
   }
 }
 
@@ -50,7 +50,6 @@ var myGameArea = {
     },
     pasue : function() {
       clearInterval(interval);
-      this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     },
     clear : function() {
       this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
