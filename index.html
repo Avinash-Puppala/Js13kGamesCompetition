@@ -29,9 +29,9 @@ function startGame() {
   }
 }
 
-function pasueGame() {
+function pauseGame() {
   if(myGameArea.frameNo > 0){
-    myGameArea.clear();
+    myGameArea.pause();
   }
 }
 
@@ -48,7 +48,7 @@ var myGameArea = {
 
       var interval = setInterval(updateGameArea, 20);
     },
-    pasue : function() {
+    pause : function() {
       clearInterval(interval);
     },
     clear : function() {
