@@ -48,7 +48,7 @@ var myGameArea = {
       var intervalID = setInterval(updateGameArea, 1000);
     },
     pause : function() {
-      clearInterval(intervalID);
+      clearTimeout(intervalID);
     },
     clear : function() {
       this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
