@@ -45,10 +45,10 @@ var myGameArea = {
       this.frameNo = 0;
     },
     start : function() {
-      var intervalID = setTimeout(updateGameArea, 10);
+      var intervalID = setInterval(updateGameArea, 10);
     },
     pause : function() {
-      clearTimeout(intervalID);
+      clearInterval(intervalID);
     },
     clear : function() {
       this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
