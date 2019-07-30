@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+interval<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -46,10 +46,10 @@ var myGameArea = {
     },
     start : function() {
 
-      this.interval = setInterval(updateGameArea, 20);
+      var interval = setInterval(updateGameArea, 20);
     },
     pasue : function() {
-      clearInterval(this.interval);
+      clearInterval(interval);
     },
     clear : function() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
