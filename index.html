@@ -9,7 +9,7 @@ canvas {
 }
 </style>
 </head>
-<body onload="startGame">
+<body onload="startGame()">
 <script>
 
 var myGamePiece;
@@ -18,7 +18,7 @@ var myScore;
 
 function startGame() {
     myGamePiece = new component(30, 30, "red", 10, 120);
-    myGamePiece.gravity = .05;
+    myGamePiece.gravity = 0.05;
     myScore = new component("30px", "Consolas", "black", 280, 40, "text");
     myGameArea.start();
 }
@@ -26,8 +26,8 @@ function startGame() {
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = 1200;
-        this.canvas.height = 480;
+        this.canvas.width = 480;
+        this.canvas.height = 270;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
@@ -120,7 +120,7 @@ function updateGameArea() {
     myGamePiece.update();
 }
 
-function everyinterval(n ) {
+function everyinterval(n) {
     if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
     return false;
 }
@@ -130,7 +130,6 @@ function accelerate(n) {
 }
 </script>
 <br>
-<!--<button onclick="startGame">START</button>-->
 <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
 <p>Use the ACCELERATE button to stay in the air</p>
 <p>How long can you stay alive?</p>
