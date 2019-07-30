@@ -31,7 +31,7 @@ function startGame() {
 
 function pauseGame() {
   if(myGameArea.frameNo > 0){
-    myGameArea.clear();
+    myGameArea.pause();
   }
 }
 
@@ -46,10 +46,10 @@ var myGameArea = {
     },
     start : function() {
 
-      var interval = setInterval(updateGameArea, 20);
+      var intervalID = setInterval(updateGameArea, 20);
     },
     pause : function() {
-      clearInterval(interval);
+      clearInterval(intervalID);
     },
     clear : function() {
       this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
