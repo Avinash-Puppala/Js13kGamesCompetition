@@ -29,6 +29,12 @@ function startGame() {
   }
 }
 
+function pasueGame() {
+  if(myGameArea.frameNo > 0){
+    myGameArea.pasue();
+  }
+}
+
 var myGameArea = {
     canvas : document.createElement("canvas"),
     load : function(){
@@ -40,10 +46,10 @@ var myGameArea = {
     },
     start : function() {
 
-        this.interval = setInterval(updateGameArea, 20);
+      this.interval = setInterval(updateGameArea, 20);
     },
     pasue : function() {
-
+      clearInterval(this.interval);
     },
     clear : function() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
