@@ -45,7 +45,7 @@ var myGameArea = {
       this.frameNo = 0;
     },
     start : function() {
-      var intervalID = setInterval(updateGameArea, 1000);
+      var intervalID = setTimeout(updateGameArea, 1000);
     },
     pause : function() {
       clearTimeout(intervalID);
