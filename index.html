@@ -24,7 +24,9 @@ function loadGame() {
 }
 
 function startGame() {
-  myGameArea.start();
+  if (myGameArea.frameNo == 0){
+    myGameArea.start();
+  }
 }
 
 var myGameArea = {
@@ -40,9 +42,16 @@ var myGameArea = {
 
         this.interval = setInterval(updateGameArea, 20);
     },
+    pasue : function() {
+
+    },
     clear : function() {
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
+}
+
+function pauseGame() {
+
 }
 
 function component(width, height, color, x, y, type) {
